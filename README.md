@@ -8,6 +8,10 @@ There's no official list of every function you can call from JavaScript. This re
 
 **Read it online:** https://arp-299-org.github.io/makecode-minecraft-js-reference/
 
+## Why this exists
+
+Microsoft's [MakeCode reference](https://minecraft.makecode.com/reference) documents the blocks, one page at a time. It doesn't list the functions that have no block, it doesn't give exact JavaScript signatures, and it doesn't say which JavaScript features actually work in Code Builder. This reference was worked out piece by piece and tested in Minecraft Education, so people and coding assistants can write Code Builder JavaScript without guessing.
+
 ## Start here
 
 - **[JavaScript guide](docs/javascript-guide.md)**: how programs run, positions, constants, and which JavaScript features work. Every feature was tested in Minecraft Education.
