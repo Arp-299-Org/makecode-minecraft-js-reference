@@ -1,0 +1,54 @@
+# MakeCode for Minecraft: JavaScript Reference
+
+> Unofficial reference for writing JavaScript in Minecraft Education's Code Builder (Microsoft MakeCode for Minecraft v2.1.27): every namespace, function, signature, parameter, default value and constant, generated from the editor's own API data.
+
+Start with the JavaScript guide: MakeCode's JavaScript is a TypeScript subset, and the guide covers how programs run, positions, which language features work and which don't, background loops, and debugging. Then look up functions in the API pages.
+
+## Guide
+
+- [JavaScript guide](https://raw.githubusercontent.com/Arp-299-Org/makecode-minecraft-js-reference/main/docs/javascript-guide.md): how programs run, positions, constants, and supported JavaScript features
+- [Everything in one file](https://raw.githubusercontent.com/Arp-299-Org/makecode-minecraft-js-reference/main/llms-full.txt): the guide and every API page together
+
+## Minecraft
+
+- [player](https://raw.githubusercontent.com/Arp-299-Org/makecode-minecraft-js-reference/main/docs/api/player.md): Give commands, communicate, and respond to events that happen in the game
+- [agent](https://raw.githubusercontent.com/Arp-299-Org/makecode-minecraft-js-reference/main/docs/api/agent.md): Your assistant in Minecraft to help you get things done.
+- [blocks](https://raw.githubusercontent.com/Arp-299-Org/makecode-minecraft-js-reference/main/docs/api/blocks.md): Everything for adding, inspecting, and changing blocks in the world.
+- [mobs](https://raw.githubusercontent.com/Arp-299-Org/makecode-minecraft-js-reference/main/docs/api/mobs.md): Creatures that live in the Minecraft world.
+- [gameplay](https://raw.githubusercontent.com/Arp-299-Org/makecode-minecraft-js-reference/main/docs/api/gameplay.md): Commands to control the game mode, weather, time, and change the rules.
+- [positions](https://raw.githubusercontent.com/Arp-299-Org/makecode-minecraft-js-reference/main/docs/api/positions.md): World and relative position operators
+- [builder](https://raw.githubusercontent.com/Arp-299-Org/makecode-minecraft-js-reference/main/docs/api/builder.md): A 3D builder interface
+- [shapes](https://raw.githubusercontent.com/Arp-299-Org/makecode-minecraft-js-reference/main/docs/api/shapes.md): Fill lines, spheres and other geometric shapes
+- [events](https://raw.githubusercontent.com/Arp-299-Org/makecode-minecraft-js-reference/main/docs/api/events.md): Run code when things happen in the world: blocks broken or placed, items crafted, mobs killed, players moving, and more.
+
+## Extensions
+
+- [file](https://raw.githubusercontent.com/Arp-299-Org/makecode-minecraft-js-reference/main/docs/api/file.md): Read and write text or CSV files chosen with a file picker.
+
+## Alternate names (not available by default)
+
+- [user](https://raw.githubusercontent.com/Arp-299-Org/makecode-minecraft-js-reference/main/docs/api/user.md): Give commands, communicate, and respond to events that happen in the exploration
+- [exploration](https://raw.githubusercontent.com/Arp-299-Org/makecode-minecraft-js-reference/main/docs/api/exploration.md): Commands to control the exploration mode, weather, time, and change the rules.
+
+## Language basics
+
+- [loops](https://raw.githubusercontent.com/Arp-299-Org/makecode-minecraft-js-reference/main/docs/api/loops.md): Repeat code and pause.
+- [Math](https://raw.githubusercontent.com/Arp-299-Org/makecode-minecraft-js-reference/main/docs/api/Math.md): More complex operations with numbers.
+- [String](https://raw.githubusercontent.com/Arp-299-Org/makecode-minecraft-js-reference/main/docs/api/String.md): Combine, split, and search text strings.
+- [Array](https://raw.githubusercontent.com/Arp-299-Org/makecode-minecraft-js-reference/main/docs/api/Array.md): Add, remove, and replace items in lists.
+- [Number](https://raw.githubusercontent.com/Arp-299-Org/makecode-minecraft-js-reference/main/docs/api/Number.md): Number helpers.
+- [console](https://raw.githubusercontent.com/Arp-299-Org/makecode-minecraft-js-reference/main/docs/api/console.md): Write debugging output.
+- [Object](https://raw.githubusercontent.com/Arp-299-Org/makecode-minecraft-js-reference/main/docs/api/Object.md): Object helpers.
+
+## Types
+
+- [Position](https://raw.githubusercontent.com/Arp-299-Org/makecode-minecraft-js-reference/main/docs/api/Position.md): A world coordinate that may be relative (~) or local (^) to the player position.
+- [player.ChatCommandArguments](https://raw.githubusercontent.com/Arp-299-Org/makecode-minecraft-js-reference/main/docs/api/player.ChatCommandArguments.md)
+- [TargetSelector](https://raw.githubusercontent.com/Arp-299-Org/makecode-minecraft-js-reference/main/docs/api/TargetSelector.md): A target selector
+- [QueryTargetResult](https://raw.githubusercontent.com/Arp-299-Org/makecode-minecraft-js-reference/main/docs/api/QueryTargetResult.md)
+- [events.Enchantment](https://raw.githubusercontent.com/Arp-299-Org/makecode-minecraft-js-reference/main/docs/api/events.Enchantment.md)
+
+## Other
+
+- [globals](https://raw.githubusercontent.com/Arp-299-Org/makecode-minecraft-js-reference/main/docs/api/globals.md): Global functions: `pos`, `randint`, `parseInt`, and more
+- [enums](https://raw.githubusercontent.com/Arp-299-Org/makecode-minecraft-js-reference/main/docs/api/enums.md): Every block, item, mob, direction, and other value list

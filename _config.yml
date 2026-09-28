@@ -1,0 +1,11 @@
+title: MakeCode for Minecraft JavaScript Reference
+description: Unofficial reference for writing JavaScript in Minecraft Education's Code Builder
+theme: jekyll-theme-primer
+exclude:
+  - scripts
+  - node_modules
+  - data
+  - package.json
+  - package-lock.json
+  - LICENSE
+  - docs/LICENSE
