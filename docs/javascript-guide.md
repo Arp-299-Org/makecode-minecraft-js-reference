@@ -2,7 +2,7 @@
 
 Code Builder's JavaScript view doesn't run full JavaScript. It runs **Static TypeScript**, a subset of TypeScript that MakeCode compiles ahead of time. Most everyday JavaScript works, but some features are missing.
 
-Everything marked ✅ or ❌ on this page was tested in Minecraft Education with MakeCode for Minecraft **v2.1.27**.
+Everything marked ✅, ❌ or ⚠️ on this page was tested in Minecraft Education 26.32 with MakeCode for Minecraft **v2.1.27**, most recently on October 2, 2026. The test programs are in [`tests/in-game`](../tests/in-game).
 
 ## How a program runs
 
@@ -85,6 +85,7 @@ gameplay.setGameMode(CREATIVE, mobs.target(LOCAL_PLAYER))
 | `try` / `catch` / `throw` | `try { throw "oops" } catch (e) { }` |
 | `typeof` | `typeof list` gives `"object"` |
 | Array destructuring | `let [a, b] = list` |
+| Object destructuring | `let { x, y } = point` |
 | `any` objects | `let o: any = {}; o.foo = 3` |
 
 ### Doesn't work ❌
@@ -92,28 +93,20 @@ gameplay.setGameMode(CREATIVE, mobs.target(LOCAL_PLAYER))
 | Feature | Error you'll see | Use instead |
 |---|---|---|
 | Optional chaining `a?.b` | `Expression expected` | `if (a) { a.b }` |
-| Spread `[...list, 3]` | `SpreadElement not supported` | `list.concat([3])` |
-| `async` / `await` | `AwaitExpression not supported` | Nothing needed: commands already wait |
-| Regular expressions `/ab+/` | `RegularExpressionLiteral not supported` | String methods like `includes`, `indexOf`, `split` |
+| `async` / `await` | None: pressing Run does nothing | Nothing needed: commands already wait |
 | `JSON` | `Cannot find name 'JSON'` | Build strings yourself |
-| `Map` | `Cannot find name 'Map'` | Arrays, or an object with `any` |
+| `Map` | `Cannot find name 'Map'. Did you mean 'MAP'?` | Arrays, or an object with `any` |
 | `setTimeout` | `Cannot find name 'setTimeout'` | `loops.pause(ms)` |
 | `Date` | `Cannot find name 'Date'` | `gameplay.timeQuery(...)` for game time |
 
 ### Watch out ⚠️
 
-**Object destructuring compiles but doesn't work.** In this code, `x` ends up `undefined`, with no error:
+These compile with no error but give the wrong result, so they're easy to miss.
 
-```typescript
-let { x, y } = { x: 1, y: 2 }   // x is undefined!
-```
-
-Write it out instead:
-
-```typescript
-let point = { x: 1, y: 2 }
-let x = point.x
-```
+| Feature | What actually happens | Use instead |
+|---|---|---|
+| Spread `[...list, 3]` | The spread part comes out empty: with `list = [1, 2]`, `[...list, 3].join(",")` gives `",3"` | `list.concat([3])` |
+| Regular expressions `/ab+/` | The value is `undefined` | String methods like `includes`, `indexOf`, `split` |
 
 ## Loops that run in the background
 
