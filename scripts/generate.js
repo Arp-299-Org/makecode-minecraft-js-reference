@@ -415,8 +415,8 @@ function writeLlms(pages) {
 
     const idx = ["# MakeCode for Minecraft: JavaScript Reference", "", `> ${summary}`, "",
         "Start with the JavaScript guide: MakeCode's JavaScript is a TypeScript subset, and the guide covers how programs run, " +
-        "positions, which language features work and which don't, background loops, and debugging. Then look up functions in the API pages.", "",
-        "## Guide", "", `- [JavaScript guide](${RAW}/${guide}): how programs run, positions, constants, and supported JavaScript features`,
+        "positions, which language features work and which don't, how the builder behaves, background loops, and debugging. Then look up functions in the API pages.", "",
+        "## Guide", "", `- [JavaScript guide](${RAW}/${guide}): how programs run, positions, constants, supported JavaScript features, and how the builder behaves`,
         `- [Everything in one file](${RAW}/llms-full.txt): the guide and every API page together`, ""];
     let section;
     for (const p of pages) {

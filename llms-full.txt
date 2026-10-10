@@ -124,6 +124,34 @@ These compile with no error but give the wrong result, so they're easy to miss.
 | Spread `[...list, 3]` | The spread part comes out empty: with `list = [1, 2]`, `[...list, 3].join(",")` gives `",3"` | `list.concat([3])` |
 | Regular expressions `/ab+/` | The value is `undefined` | String methods like `includes`, `indexOf`, `split` |
 
+## The builder: how it actually behaves
+
+The builder is an invisible point you move around. Moving it builds nothing; blocks appear only when you call `tracePath` (or `fill`, `line`, `place`, `raiseWall`). Three things the function list doesn't tell you:
+
+| What | What actually happens | Checked |
+|---|---|---|
+| `tracePath` builds everything since the last `mark()` | Tracing again without a new `mark()` rebuilds the whole path from that mark, including blocks already built and any stretch you moved through on purpose to leave a gap. To leave a gap, call `mark()` again where the next part starts. | Tested, Minecraft Education 26.32, Oct 7 2026 |
+| The builder keeps its direction between runs | It doesn't reset when the chat command runs again. Code that ends with `builder.turn(...)` starts the next run facing the new way, so the same code builds in a different direction each time. Set the direction at the start with `builder.face(...)`. | Seen, Oct 7 2026 (not yet tested on its own) |
+| It can build where the player stands | `builder.teleportTo(pos(0, 0, 0))` puts the builder at the player's feet, so the first block of a path goes there and pushes the player aside. | Seen, Oct 8 2026 (not yet tested on its own) |
+
+A path with a gap:
+
+```typescript
+player.onChat("gap", function () {
+    builder.teleportTo(pos(0, 0, 0))
+    builder.face(CompassDirection.North)
+    builder.mark()
+    builder.move(FORWARD, 4)
+    builder.tracePath(DIAMOND_BLOCK)   // 5 diamond blocks
+    builder.move(FORWARD, 3)           // moves on, builds nothing
+    builder.mark()                     // a new path starts here
+    builder.move(FORWARD, 4)
+    builder.tracePath(GOLD_BLOCK)      // 5 gold blocks, with a 2-block gap before them
+})
+```
+
+Without the second `mark()`, the gold trace would rebuild everything from the first mark: one 12-block gold line, no gap.
+
 ## Loops that run in the background
 
 ```typescript

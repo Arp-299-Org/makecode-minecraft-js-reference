@@ -2,11 +2,11 @@
 
 > Unofficial reference for writing JavaScript in Minecraft Education's Code Builder (Microsoft MakeCode for Minecraft v2.1.27): every namespace, function, signature, parameter, default value and constant, generated from the editor's own API data.
 
-Start with the JavaScript guide: MakeCode's JavaScript is a TypeScript subset, and the guide covers how programs run, positions, which language features work and which don't, background loops, and debugging. Then look up functions in the API pages.
+Start with the JavaScript guide: MakeCode's JavaScript is a TypeScript subset, and the guide covers how programs run, positions, which language features work and which don't, how the builder behaves, background loops, and debugging. Then look up functions in the API pages.
 
 ## Guide
 
-- [JavaScript guide](https://raw.githubusercontent.com/Arp-299-Org/makecode-minecraft-js-reference/main/docs/javascript-guide.md): how programs run, positions, constants, and supported JavaScript features
+- [JavaScript guide](https://raw.githubusercontent.com/Arp-299-Org/makecode-minecraft-js-reference/main/docs/javascript-guide.md): how programs run, positions, constants, supported JavaScript features, and how the builder behaves
 - [Everything in one file](https://raw.githubusercontent.com/Arp-299-Org/makecode-minecraft-js-reference/main/llms-full.txt): the guide and every API page together
 
 ## Minecraft

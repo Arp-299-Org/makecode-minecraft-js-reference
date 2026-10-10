@@ -4,6 +4,7 @@ These programs check the claims in [the JavaScript guide](../../docs/javascript-
 
 - `works.ts`: every "Works ✅" row. After Run, type `check` in chat; each row prints PASS or FAIL.
 - `doesnt-work/*.ts`: one program per "doesn't work" or "watch out" row. Each either shows an error in the Problems panel or prints what it actually did.
+- `builder.ts`: the builder rows. These can't print PASS or FAIL; each chat command says what you should see built. Not run yet as a whole (the `gap` and `retrace` behaviour was checked by hand on Oct 7, 2026).
 
 ## Last run: October 2, 2026, Minecraft Education 26.32 (MakeCode v2.1.27, macOS)
 
